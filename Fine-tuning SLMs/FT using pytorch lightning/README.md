@@ -38,16 +38,7 @@ pip install transformers datasets pytorch-lightning torchmetrics
 
 **Note:** Replace `cu118` with your CUDA version if you're using GPU support, or use `cpu` if you're running on CPU.
 
-### **3. Rename Your Script File (Optional but Recommended)**
-
-Having spaces in file names can sometimes cause issues when running scripts from the command line. It's advisable to rename your script to avoid spaces.
-
-```bash
-# Rename the file
-mv "fine-tuning with pytorch lightning.py" fine_tuning_with_pytorch_lightning.py
-```
-
-### **4. Run the Script**
+### **3. Run the Script**
 
 You can now run your script using Python. If you didn't rename the file, make sure to enclose the file name in quotes.
 
@@ -63,7 +54,7 @@ python fine_tuning_with_pytorch_lightning.py
 python "fine-tuning with pytorch lightning.py"
 ```
 
-### **5. Customize Script Parameters (Optional)**
+### **4. Customize Script Parameters (Optional)**
 
 Your script uses `argparse` to accept command-line arguments, allowing you to customize various aspects of the training process. You can view all the available arguments and their default values by running:
 
@@ -130,11 +121,11 @@ python fine_tuning_with_pytorch_lightning.py --batch_size 16 --dataset_name your
 
 Replace `your-dataset-name` with the actual name of the dataset you wish to use.
 
-### **6. Monitor the Training Process**
+### **5. Monitor the Training Process**
 
 The script will start training the model, and you should see output in the console showing the training progress, including metrics like loss, precision, recall, accuracy, and F1 score for both training and validation.
 
-### **7. After Training Completion**
+### **6. After Training Completion**
 
 Once training is complete:
 
