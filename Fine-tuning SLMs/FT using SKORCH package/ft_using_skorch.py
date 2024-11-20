@@ -46,25 +46,6 @@ train = dataset_train.to_pandas()
 valid = dataset_valid.to_pandas()
 test = dataset_test.to_pandas()
 
-# Load additional data from CSV file
-df = pd.read_csv("./Data for predictions/ICSR classifier testing(Sheet1).csv", encoding='cp1252')
-df = df[['text', 'SME prediction']][:1083]  # Select relevant columns and rows
-
-# Map textual labels to numerical labels
-df['SME prediction'] = df['SME prediction'].map({
-    "ICSR": 1,
-    "ICSR ": 1,
-    "DISCARD": 0,
-    "Discard": 0,
-    "DISCARD  ": 0
-})
-
-# Rename columns for consistency
-df.rename({'SME prediction': 'label', 'text': 'text'}, axis=1, inplace=True)
-
-# Concatenate the additional data with the training data
-train = pd.concat([train, df], axis=0)
-
 # Extract features and labels for training, validation, and test sets
 X_train = train['text']
 y_train = train['label']
