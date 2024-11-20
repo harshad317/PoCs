@@ -47,13 +47,6 @@ You can now run your script using Python. If you didn't rename the file, make su
 ```bash
 python fine_tuning_with_pytorch_lightning.py
 ```
-
-#### **If You Did Not Rename the File:**
-
-```bash
-python "fine-tuning with pytorch lightning.py"
-```
-
 ### **4. Customize Script Parameters (Optional)**
 
 Your script uses `argparse` to accept command-line arguments, allowing you to customize various aspects of the training process. You can view all the available arguments and their default values by running:
