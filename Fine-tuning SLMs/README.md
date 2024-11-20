@@ -2,7 +2,8 @@
 
 Use this python script to find the best hyperparameters to fine tune any SLMs.
 
-#### How to use this script
+## How to use this script:
+
 ### **Install Dependencies**
 
 Install the required packages using `pip`.
@@ -36,7 +37,7 @@ Now that everything is set up, you can run the script using the Python interpret
 
 ### **Navigate to the Script's Directory**
 
-Open your terminal or command prompt and navigate to the directory where you saved `train_model.py`.
+Open your terminal or command prompt and navigate to the directory where you saved `tuning.py`.
 
 ```bash
 cd /path/to/your/project
@@ -51,13 +52,13 @@ You can run the script with default settings or customize it using command-line 
 To see all available command-line arguments and their descriptions, run:
 
 ```bash
-python train_model.py --help
+python tuning.py --help
 ```
 
 This command will display something like:
 
 ```
-usage: train_model.py [-h] [--model_name MODEL_NAME] [--labels LABELS]
+usage: tuning.py [-h] [--model_name MODEL_NAME] [--labels LABELS]
                       [--metric_to_use METRIC_TO_USE] [--num_train_epochs NUM_TRAIN_EPOCHS]
                       [--n_trials N_TRIALS] [--seed SEED] [--dataset_name DATASET_NAME]
                       [--max_length MAX_LENGTH] [--stride STRIDE]
@@ -98,7 +99,7 @@ optional arguments:
 To run the script with all default parameters:
 
 ```bash
-python train_model.py
+python tuning.py
 ```
 
 This command:
@@ -113,7 +114,7 @@ This command:
 You can customize various aspects of the training process by providing arguments. For instance:
 
 ```bash
-python train_model.py \
+python tuning.py \
     --model_name "bert-base-uncased" \
     --num_train_epochs 3 \
     --n_trials 50 \
