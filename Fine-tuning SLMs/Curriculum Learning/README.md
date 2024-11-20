@@ -1,5 +1,3 @@
----
-
 ## **Running the Script**
 
 1. **Open a Terminal or Command Prompt:**
